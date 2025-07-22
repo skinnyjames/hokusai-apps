@@ -106,3 +106,5 @@ class Counter < Hokusai::Block
     super(**args)
   end
 end
+
+Counter
