@@ -22,18 +22,6 @@ class Counter < Hokusai::Block
     size: 50;
     color: rgb(255,255,255);
   }
-
-  scrollbar {
-    width: 25;
-    control_height: 100;
-    control_padding: 5;
-    control_rounding: 5;
-  }
-  modalContent {
-    width: 300.0;
-    height: 300.0;
-    background: rgb(255, 255, 255);
-  }
   EOF
 
   template <<-EOF
@@ -45,9 +33,6 @@ class Counter < Hokusai::Block
           size="130" 
           :color="count_color"
         }
-        modal { :active="over_20" @close="close_modal" }
-          vblock { ...modalContent }
-            text { content="okay" }
       hblock
         vblock#add { ...additionStyles }
           label { 
