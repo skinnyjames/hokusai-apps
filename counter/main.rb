@@ -26,7 +26,7 @@ class Counter < Hokusai::Block
 
   template <<-EOF
   [template]
-    vblock
+    vblock { background="255,255,255" }
       hblock
         label#count {
           :content="count"
