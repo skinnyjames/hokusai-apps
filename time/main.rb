@@ -62,3 +62,5 @@ class Timer < Hokusai::Block
     end
   end
 end
+
+Timer
