@@ -1,7 +1,7 @@
-apps:
-  - title: Timers
-    folder: time
-    icon: time/icon.png
-  - title: Counter
-    folder: counter
-    icon: counter/icon.png
+---
+- title: Timers
+  folder: time
+  icon: time/icon.png
+- title: Counter
+  folder: counter
+  icon: counter/icon.png
