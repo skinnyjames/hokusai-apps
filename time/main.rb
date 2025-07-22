@@ -13,18 +13,20 @@ class Timer < Hokusai::Block
   
   template <<~EOF
   [template]
-    hblock
-      text { ...stopwatch :content="current_time" }
-    hblock { ...control }
-      circle {
-        :color="color"
-        :radius="30.0"
-        @click="pause_timer"
-        cursor="pointer"
-      }
+    vblock { background="255,255,255" }
+      hblock
+        text { ...stopwatch :content="current_time" }
+      hblock { ...control }
+        circle {
+          :color="color"
+          :radius="30.0"
+          @click="pause_timer"
+          cursor="pointer"
+        }
   EOF
 
   uses(
+    vblock: Hokusai::Blocks::Vblock,
     text: Hokusai::Blocks::Text,
     hblock: Hokusai::Blocks::Hblock,
     circle: Hokusai::Blocks::Circle
