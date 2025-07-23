@@ -9,7 +9,7 @@ class Counter < Hokusai::Block
   }
 
   additionLabel {
-    size: 40;
+    size: 20;
     color: rgb(255,255,255);
   }
 
@@ -19,7 +19,7 @@ class Counter < Hokusai::Block
   }
 
   subtractLabel {
-    size: 50;
+    size: 20;
     color: rgb(255,255,255);
   }
   EOF
@@ -34,16 +34,14 @@ class Counter < Hokusai::Block
           :color="count_color"
         }
       hblock
-        vblock#add { ...additionStyles }
+        vblock#add { ...additionStyles @click="increment"}
           label { 
             content="Add"
-            @click="increment" 
             ...additionLabel 
           }
-        vblock#subtract { ...subtractStyles }
+        vblock#subtract { ...subtractStyles @click="decrement" }
           label { 
             content="Subtract"
-            @click="decrement" 
             ...subtractLabel 
           }
   EOF
